@@ -1,0 +1,29 @@
+{
+  "name": "wedding-demo",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "infra"
+  ],
+  "scripts": {
+    "start": "npm run start -w apps/web",
+    "build": "npm run build -w apps/web",
+    "test": "npm test -w apps/web -- --watch=false && npm test -w infra",
+    "synth": "npm run synth -w infra",
+    "deploy": "npm run build && npm run deploy -w infra && bash scripts/deploy-site.sh",
+    "destroy": "npm run destroy -w infra",
+    "images": "bash scripts/optimize-images.sh"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  }
+}

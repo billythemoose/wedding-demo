@@ -1,0 +1,92 @@
+/* Anchor the absolute navbar below the demo banner instead of the page top. */
+:host {
+  display: block;
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 9;
+  /* display: flex; */
+  margin: 1em auto;
+  padding: 0 16px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+.nav-item:hover {
+  background-color: #555;
+}
+
+@media screen and (min-width: 580px) {
+  .small-screen {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 580px) {
+/* small screens*/
+.navbar {
+  /* absolute breaks on other pages? */
+  /* broken: rsvp*/
+  /* mostly fine: our story, travel */
+  position: absolute;
+  margin: 1em auto;
+
+  /* kinda bootleg but works */
+  width: 100vw;
+  /* Keep the 16px side padding inside 100vw, so no sideways scroll. */
+  box-sizing: border-box;
+}
+
+/* Closed state */
+#navlinks {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 300ms ease, opacity 200ms ease;
+}
+
+/* Open state */
+#navlinks.open {
+  max-height: 500px; /* must be large enough for content */
+  opacity: 1;
+}
+
+/* Links */
+.navbar a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  width: 6em;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+  /* background-color: #555; */
+  /* background-color: rgba(85, 85, 85, 0.53); */
+  background-color: rgba(64, 64, 64, 0.9);
+}
+
+
+/* TODO: this doesn't work? */
+/* but also there's no real hover in mobile lmao.... */
+.nav-item:hover {
+
+  background-color: rgba(64, 64, 64, 0.9);
+}
+
+/* .nav-item:active {
+  background-color: #555;
+} */
+}

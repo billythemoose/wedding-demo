@@ -1,0 +1,17 @@
+<div class="login">
+    <form class="login-form" [formGroup]="form" (ngSubmit)="login()">
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input name="password" formControlName="password" type="password">
+        </div>
+        <div *ngIf="!isLoading" class="form-buttons">
+            <button class="button button-primary" [disabled]="form.invalid" type="submit">Login</button>
+        </div>
+
+        <div *ngIf="isLoading">
+            <button class="button button-primary" type="button" [disabled]="true" type="submit">
+                <span class="loader"></span>
+            </button>
+        </div>
+    </form>
+</div>

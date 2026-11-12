@@ -1,0 +1,13 @@
+<div class="navbar">
+  <a class="small-screen" (click)="dropdown()">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <!-- hacky for menu close but works -->
+  <div id="navlinks" [class.open]="isOpen" (click)="dropdown()">
+    <!-- full paths: the app is served from /, so each link includes its /w or /s prefix -->
+    @for (link of links(); track link.path) {
+      <a class="nav-item" [routerLink]="link.path">{{ link.label }}</a>
+    }
+  </div>
+</div>

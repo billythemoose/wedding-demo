@@ -1,0 +1,57 @@
+section {
+    margin: 4em auto;
+    padding: 40px;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; /* space between sections */
+}
+
+.text-section {
+    background: #f6f6f6;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+ul {
+    padding-left: 1em;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p {
+    padding-top: 1em;
+}
+
+/* Phones: one column, and less padding so the text has room. */
+@media screen and (max-width: 580px) {
+    section {
+        padding: 16px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

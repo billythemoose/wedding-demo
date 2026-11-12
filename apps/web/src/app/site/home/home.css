@@ -1,0 +1,84 @@
+ :host {
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  .main-intro {
+    min-height: 40em;
+    max-width: 1324px;
+    margin: auto;
+    background-image: url("../../../assets/img/1.webp");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* two equal columns */
+
+  }
+  .main-intro-text {
+    display: flex; 
+    flex-direction: column;
+    justify-content: end;
+    margin: 0 auto;
+  }
+
+  .main-intro-text-sub {
+    display: flex; 
+    flex-direction: column;
+    justify-content: start;
+    margin: 0 auto;
+  }
+
+  h1 {
+    flex-direction: row;
+    /* Shrinks on phones so SPOKANE and the date fit. */
+    font-size: clamp(2.5rem, 13vw, 4em);
+    color: white;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px  2px 0 #000,
+        2px  2px 0 #000;
+  }
+
+  .speech {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    margin: 3em 2em 3em 0em;
+    grid-template-rows: 1fr 1fr; /* two equal columns */
+  }
+
+  .speech div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.25em;
+  }
+  .speech p {
+    color: white
+  }

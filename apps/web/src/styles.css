@@ -1,0 +1,45 @@
+/* Toast styles for ngx-toastr. */
+@import 'ngx-toastr/toastr';
+
+/* Global styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background: #11382a;
+}
+
+.test_body_gradient {
+  background: #154734;
+  background: radial-gradient(circle, rgba(21, 71, 52, 1) 0%, rgba(18, 53, 36, 1) 100%);
+}
+
+.test_dark {
+  background: #0D2B20;
+}
+
+.test_dark_er {
+  background: #0D2B20;
+}
+
+.test_body_dark_gradient {
+  background: #11382a;
+  background: radial-gradient(circle, rgba(17, 56, 42, 1) 0%, rgba(4, 18, 11, 1) 100%); 
+}
+:root {
+  --primary-color: #605DC8;
+  --secondary-color: #8B89E6;
+  --accent-color: #e8e7fa;
+  --shadow-color: #E8E8E8;
+}
+
+button.primary {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
