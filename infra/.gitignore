@@ -1,0 +1,6 @@
+# Synth output and lookup cache both contain the account ID and zone ID.
+cdk.out/
+cdk.context.json
+
+# Local settings (hosted zone ID, budget email)
+.env
